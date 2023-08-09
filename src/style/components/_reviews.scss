@@ -1,0 +1,82 @@
+.reviews {
+  background: #3A4574;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  @include to-lg {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 785px;
+    @include to-lg {
+      max-width: 70%;
+    }
+  }
+
+  &__icon {
+    @include margin-bottom(34);
+    @include widthHeight(83, 58);
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include margin-bottom(20);
+    @include font-size(36);
+    @include line-height(40);
+    color: $brun-color;
+    font-weight: 600;
+    white-space: nowrap;
+    @include to-lg {
+      white-space: normal;
+    }
+
+  }
+
+  &__desc {
+    @include font-size(16);
+    @include line-height(40);
+    @include margin-bottom(30);
+    color: $white-color;
+    font-weight: 400;
+  }
+
+  &__author {
+    @include font-size(24);
+    @include line-height(40);
+    color: $brun-color;
+    text-align: center;
+    letter-spacing: 6.2px;
+  }
+}
+
+.swiper__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-button-prev {
+  padding-left: 15px;
+}
+
+.swiper-button-next {
+  padding-right: 15px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  transform: scale(1.15);
+  margin-top: -27px;
+  color: #fff;
+  @include to-lg {
+    transform: scale(0.4);
+  }
+
+  &:hover {
+    color: $brun-color;
+  }
+}
+

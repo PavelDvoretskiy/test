@@ -1,0 +1,64 @@
+.services {
+  @include padding-top(109);
+  @include padding-bottom(50);
+
+  &__item {
+    @include margin-bottom(30);
+    @include to-lg {
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include font-size(40);
+    @include line-height(88);
+    position: relative;
+    color: $black-color;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include to-lg {
+      margin-bottom: 5px;
+    }
+
+    &:before {
+      position: absolute;
+      left: -55px;
+      bottom: -5px;
+      content: '';
+      width: 108px;
+      height: 2px;
+      background-color: $brun-color;
+      @include to-lg {
+        left: -5%;
+        bottom: 10px;
+        width: 15%;
+      }
+    }
+  }
+
+  &__desc {
+    @include font-size(16);
+    @include line-height(32);
+    max-width: 470px;
+    color: #808080;
+    font-weight: 400;
+  }
+
+  &__img-container {
+
+  }
+
+  &__img {
+    max-width: 670px;
+    width: 100%;
+    max-height: 560px;
+    margin: 0 auto;
+  }
+}

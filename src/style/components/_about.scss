@@ -1,0 +1,123 @@
+.about {
+  padding-top: 80px;
+  padding-bottom: 90px;
+@include to-lg{
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+  &__container {
+  }
+
+  &__info-container {
+    padding-right: 15px;
+  }
+
+  &__info {
+  }
+
+  &__gallery {
+  }
+
+  &__gallery-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding-left: 4px;
+    @include to-xl{
+      padding: 0 21%;
+    }
+
+
+    &:before {
+      position: absolute;
+      content: '';
+      max-width: 474px;
+      width: 100%;
+      height: 507px;
+      border: 2px solid $brun-color;
+      padding: 20px;
+      left: 50%;
+      //top: 49px;
+      top: 7.7%;
+      transform: translateX(-50%);
+      @include to-md{
+        width: 85%;
+        height: 85%;
+      }
+      //@include from(576px){
+      //  background-color: #D3B47F;
+      //}
+    }
+  }
+}
+
+.info {
+  margin-bottom: 50px;
+
+  &__title {
+    @include font-size(24);
+    @include line-height(32);
+    margin-bottom: 10px;
+    color: $black-color;
+    font-weight: 600;
+  }
+
+  &__desc {
+    @include font-size(18);
+    @include line-height(32);
+    display: flex;
+    align-items: center;
+    color: $black-color;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__point {
+    width: 5px;
+    height: 5px;
+    margin-left: 12px;
+    background-color: $brun-color;
+
+    &:last-child {
+      margin-right: 12px;
+    }
+  }
+
+  &__line {
+    @include margin-bottom(-31);
+    height: 1px;
+    background-color: #e7e7e7;
+  }
+}
+
+.abbout {
+  &__img {
+    max-width: 323px;
+    max-height: 486px;
+    width: 100%;
+    position: relative;
+
+    &:first-child {
+      @include margin-top(152);
+      @include margin-right(22);
+      @include to-sm{
+        padding-left: 20%;
+      }
+      @include from-to-sm-lg{
+        padding-left: 40px;
+      }
+    }
+
+    &:last-child {
+      align-self: start;
+      @include to-sm{
+        padding-right: 20%;
+      }
+      @include from-to-sm-lg{
+        padding-right: 40px;
+      }
+    }
+  }
+}
